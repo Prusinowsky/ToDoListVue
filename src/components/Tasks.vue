@@ -30,7 +30,8 @@
           v-for="task in visibleTasks"
           :key="task.id"
           :task="task"
-          @completeTask="complete"
+          @editTask="editTask"
+          @completeTask="completeTask"
           @deleteTask="deleteTask(task.id)"
         >
         </Task>
@@ -120,7 +121,7 @@ export default {
     editTask: function(obj){
       this.tasks = this.tasks.map(task => {
         if(task.id !== obj.id) return task;
-        else task.content = obj.newVal;
+        else task.content = obj.newValue;
         return task;
       });
       this.save();
@@ -128,7 +129,7 @@ export default {
     save: function(){
       localStorage.setItem('tasks',JSON.stringify(this.tasks));
     },
-    complete: function(obj){
+    completeTask: function(obj){
       this.task = this.tasks.map(task => {if(task.id !== obj.id) return task; else task.complete = obj.status; return task;});
       this.save();
     },
