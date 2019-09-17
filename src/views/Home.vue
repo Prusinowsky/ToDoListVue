@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-
-        <tasks v-bind:tasks="tasks"></tasks>
-
+    <tasks></tasks>
   </div>
 </template>
 
@@ -15,12 +13,10 @@ export default {
   },
   data() {
     return {
-      tasks: []
+      tasks: [],
     };
-  },
+  }
 };
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
