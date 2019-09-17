@@ -1,33 +1,26 @@
 <template>
   <div class="home">
-    <div class="col-sm-6 offset-sm-3">
-      <h1>Here you type you task</h1>
-      <div class="tasks">
-        <div v-for="task in tasks" v-bind:key="task.id">
-          {{ task.content }}
-        </div>
-      </div>
-    </div>
+
+        <tasks v-bind:tasks="tasks"></tasks>
+
   </div>
 </template>
 
 <script>
+import Tasks from "../components/Tasks.vue";
+
 export default {
-  el: "#home",
+  components: {
+    Tasks
+  },
   data() {
     return {
-      tasks: [
-        {
-          id: 1,
-          content: "Finish to do list app"
-        }
-      ]
+      tasks: []
     };
-  }
+  },
 };
 </script>
 
-<style lang="sass">
+<style lang="scss">
 
 </style>
-

@@ -20,22 +20,24 @@
 </template>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+
+  #app {
+    font-family: Nunito Sans, system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  #nav {
+    padding: 30px;
+    a {
+      font-weight: bold;
     color: #2c3e50;
 
-    &.active {
+      &.active {
       color: #fff;
+      }
     }
   }
-}
 </style>
